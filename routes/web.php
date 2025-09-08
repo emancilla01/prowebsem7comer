@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome');
@@ -28,6 +28,13 @@ Route::get('compras',function() {
 Route::get('/logout',function(){
     Auth::logout();
     return redirect('/');
+});
+
+Route::get('actores',function() {
+    // $actores = DB::select('SELECT * FROM actor');
+    $actores = DB::table('actor')->paginate(5);
+    // return $actores;
+    return view('actores',['actores'=>$actores]);
 });
 
 require __DIR__.'/settings.php';
