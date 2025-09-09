@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome');
@@ -35,6 +36,21 @@ Route::get('actores',function() {
     $actores = DB::table('actor')->paginate(5);
     // return $actores;
     return view('actores',['actores'=>$actores]);
+});
+
+Route::get('paises',function() {
+    $paises = DB::table('country')->paginate(5);
+    return view('paises',['paises'=>$paises]);
+});
+
+Route::get('clientes',function() {
+    $clientes = DB::table('customer')->paginate(5);
+    return view('clientes',['clientes'=>$clientes]);
+});
+
+Route::get('ciudades',function() {
+    $ciudades = DB::table('city')->paginate(5);
+    return view('ciudades',['ciudades'=>$ciudades]);
 });
 
 require __DIR__.'/settings.php';
