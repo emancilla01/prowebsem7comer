@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\cliente;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ClienteController;
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome');
@@ -52,6 +54,8 @@ Route::get('ciudades',function() {
     $ciudades = DB::table('city')->paginate(5);
     return view('ciudades',['ciudades'=>$ciudades]);
 });
+
+Route::get('clientes2', [ClienteController::class, 'index']);
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
