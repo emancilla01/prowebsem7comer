@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+@extends('plantilla')
+@section('menu')
+    @include('menu1')
+@endsection
+@section('contenido1')
+    <h1>Lista de Actores</h1>
+    <hr>
+    <ul>
+        @foreach ($actores as $actor)             
+        <li>{{$actor->actor_id}} {{$actor->first_name}}</li>
+        @endforeach
+    </ul>
+    {{$actores->links()}}
+@endsection
+
+
+
+
+
+
+
+
+{{-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -16,4 +38,4 @@
     {{$actores->links()}}
   
 </body>
-</html>
+</html> --}}

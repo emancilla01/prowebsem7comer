@@ -28,6 +28,11 @@
                     >Ciudades <span class="visually-hidden">(current)</span></a
                 >
             </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="paises" aria-current="page"
+                    >Paises <span class="visually-hidden">(current)</span></a
+                >
+            </li>
             {{-- <li class="nav-item">
                 <a class="nav-link" href="clientes">clientes</a>
             </li> --}}
