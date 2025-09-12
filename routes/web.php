@@ -15,8 +15,16 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/',function() {
+    return view('iniciolog');
+})->name('home');
+
+Route::get('inicio',function() {
     return view('inicio');
-});
+})->name('inicio');
+
+// Route::get('actores',function() {
+//     return redirect('/login');
+// });
 
 Route::get('catalogos',function() {
     return view('catalogos');
