@@ -16,7 +16,7 @@ Route::get('dashboard', function () {
 
 Route::get('/',function() {
     return view('inicio');
-});
+})->name('home');
 
 Route::get('catalogos',function() {
     return view('catalogos');
