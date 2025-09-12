@@ -14,10 +14,12 @@ Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// this route requests log in or register
 Route::get('/',function() {
     return view('iniciolog');
-})->name('home');
+})->name('home');   // remove name to avoid conflict with inertia
 
+// this route for logged in users - normal menu
 Route::get('inicio',function() {
     return view('inicio');
 })->name('inicio');
