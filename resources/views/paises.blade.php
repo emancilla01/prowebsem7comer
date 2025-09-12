@@ -5,12 +5,12 @@
 @section('contenido1')
     <h1>Lista de Paises</h1>
     <hr>
-    <ul>
+    {{-- <ul>
         @foreach ($paises as $country)             
         <li>{{$country->country_id}} {{$country->country}}</li>
         @endforeach
     </ul>
-    {{$paises->links()}}
+    {{$paises->links()}} --}}
 @endsection
 
 

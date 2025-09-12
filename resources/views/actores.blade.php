@@ -5,12 +5,12 @@
 @section('contenido1')
     <h1>Lista de Actores</h1>
     <hr>
-    <ul>
+    {{-- <ul>
         @foreach ($actores as $actor)             
         <li>{{$actor->actor_id}} {{$actor->first_name}}</li>
         @endforeach
     </ul>
-    {{$actores->links()}}
+    {{$actores->links()}} --}}
 @endsection
 
 

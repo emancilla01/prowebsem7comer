@@ -5,12 +5,12 @@
 @section('contenido1')
     <h1>Lista de Ciudades</h1>
     <hr>
-    <ul>
+    {{-- <ul>
         @foreach ($ciudades as $city)             
         <li>{{$city->city_id}} {{$city->city}}</li>
         @endforeach
     </ul>
-    {{$ciudades->links()}}
+    {{$ciudades->links()}} --}}
 @endsection
 
 
