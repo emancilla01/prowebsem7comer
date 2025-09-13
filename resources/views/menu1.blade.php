@@ -33,6 +33,11 @@
                     >Paises <span class="visually-hidden">(current)</span></a
                 >
             </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/logout" aria-current="page"
+                    >Logout <span class="visually-hidden">(current)</span></a
+                >
+            </li>
             {{-- <li class="nav-item">
                 <a class="nav-link" href="clientes">clientes</a>
             </li> --}}

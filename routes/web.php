@@ -17,16 +17,16 @@ Route::get('dashboard', function () {
 // this route requests log in or register
 Route::get('/',function() {
     return view('iniciolog');
-});   // remove name to avoid conflict with inertia
+})->name('home');   // remove name to avoid conflict with inertia
 
 // this route for logged in users - normal menu
 Route::get('inicio',function() {
     return view('inicio');
 })->name('inicio');
 
-Route::get('/login',function() {
-    return redirect('/login');
-})->name('home');
+// Route::get('login',function() {
+//     return view('login');
+// })->middleware('guest');
 
 Route::get('catalogos',function() {
     return view('catalogos');
