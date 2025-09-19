@@ -17,7 +17,12 @@ class ProveedorFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'rfc' => fake()->bothify('????######'),
+            'nombre' => fake()->name(),
+            'telefono' => fake()->phoneNumber(),
+            'email' => fake()->unique()->safeEmail(),
+            'direccion' => fake()->address(),
+            'nombre_contacto' => fake()->name(), 
         ];
     }
 }

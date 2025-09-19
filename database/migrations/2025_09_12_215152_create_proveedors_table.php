@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('rfc', 13);
             $table->string('nombre', 100);
-            $table->string('telefono', 15);
+            $table->string('telefono', 20);
             $table->string('email', 100);
             $table->string('direccion', 200);
             $table->string('nombre_contacto', 100);

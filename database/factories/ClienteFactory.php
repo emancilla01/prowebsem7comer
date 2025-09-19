@@ -17,7 +17,10 @@ class ClienteFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'rfc' => fake()->bothify('????######'),
+            'nombre' => fake()->name(),
+            'edad' => fake()->numberBetween(18, 65),
+            'fecha_nac' => fake()->dateTimeBetween('-65 years', '-18 years'),
         ];
     }
 }
