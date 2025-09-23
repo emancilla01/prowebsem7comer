@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\cliente;
+use App\Models\venta;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,6 +14,9 @@ class ClienteSeeder extends Seeder
      */
     public function run(): void
     {
-        cliente ::factory()->count(100)->create();
+        cliente::factory(100)->
+                has(
+                    venta::factory()->count(3) 
+                    )->create();
     }
 }
