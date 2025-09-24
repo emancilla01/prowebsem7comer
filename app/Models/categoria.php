@@ -4,9 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class categoria extends Model
 {
     /** @use HasFactory<\Database\Factories\CategoriaFactory> */
     use HasFactory;
+
+    public function productos():HasMany
+    {
+        return $this->hasMany(producto::class);
+    }
 }
