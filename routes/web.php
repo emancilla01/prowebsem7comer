@@ -55,7 +55,7 @@ Route::get('ciudades',function() {
     return view('ciudades',['ciudades'=>$ciudades]);
 });
 
-Route::get('clientes2', [ClienteController::class, 'index']);
+Route::get('clientes.index', [ClienteController::class, 'index']);
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
