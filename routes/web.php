@@ -46,8 +46,8 @@ Route::get('paises',function() {
 });
 
 Route::get('clientes',function() {
-    $clientes = DB::table('customer')->paginate(5);
-    return view('clientes',['clientes'=>$clientes]);
+    // $clientes = DB::table('customer')->paginate(5);
+    // return view('clientes',['clientes'=>$clientes]);
 });
 
 Route::get('ciudades',function() {
